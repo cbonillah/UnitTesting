@@ -1,0 +1,30 @@
+<h1 class="text-center mb-5 font-weight-bold">Cat breeds</h1>
+<a class="float-right" routerLink="/">Cat facts</a>
+<p class="font-weight-bold font-italic mb-3">A list of cat breeds</p>
+<div class="row" id="breeds">
+  <div class="col-12">
+    <p class="float-left">{{ from }} - {{ to }}. Out of {{ total }}</p>
+    <a id="next-page" class="link float-right" (click)="nextPage()" *ngIf="hasNextPage">Next page</a>
+    <a id="previous-page" class="link float-right mr-3" (click)="previousPage()" *ngIf="hasPreviousPage">Previous page</a>
+    <table class="table table-stripped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Breed</th>
+          <th>Country</th>
+          <th>Origin</th>
+          <th>Coat</th>
+          <th>Pattern</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="breed" *ngFor="let breed of breeds">
+          <td>{{ breed.breed }}</td>
+          <td>{{ breed.country }}</td>
+          <td>{{ breed.origin }}</td>
+          <td>{{ breed.coat }}</td>
+          <td>{{ breed.pattern }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

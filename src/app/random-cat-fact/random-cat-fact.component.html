@@ -1,0 +1,13 @@
+<h1 class="text-center mb-5 font-weight-bold">Cat facts</h1>
+<a class="float-right" routerLink="/breeds">Cat breeds</a>
+<p class="font-weight-bold font-italic mb-3">Did you know?</p>
+<div class="row" id="facts">
+  <div class="col-12">
+    <div class="cat-fact card mb-3 animated fadeInLeft" *ngFor="let fact of facts">
+      <div class="card-body">
+        <p>{{ fact.fact }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-primary btn-big" id="add-btn" (click)="addFact()">Another one!</button>
