@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
+import { By } from '@angular/platform-browser';
 
 import { CatBreedsComponent } from './cat-breeds.component';
 import { CatBreedsService } from '../services/cat-breeds/cat-breeds.service';
 import { CatBreedsResponse } from '../models/cat-breeds-response';
-import { of } from 'rxjs';
-import { By } from '@angular/platform-browser';
 
 describe('CatBreedsComponent', () => {
 
